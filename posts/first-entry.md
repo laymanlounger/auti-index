@@ -1,9 +1,10 @@
 
 ---
-title: First Entry
+title: "First Entry"
 date: 2026-10-09
-slug: first-entry
-tags: posts
+slug: "first-entry"
+tags:
+  - posts
 ---
 
 This is the first entry in auti-index.
