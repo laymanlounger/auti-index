@@ -33,8 +33,10 @@ permalink: index.html
   <section aria-label="Entries">
     {% for post in collections.posts | reverse %}
     <article id="{{ post.data.slug }}">
-      <h2>{{ post.data.title }}</h2>
-      <p class="date">{{ post.date | dateDisplay }}</p>
+<div class="entry-heading">
+  <h2>{{ post.data.title }}</h2>
+  <span class="date">{{ post.date | dateDisplay }}</span>
+</div>
       {{ post.templateContent | safe }}
     <p class="entry-links">
   <a href="#index">↑ index</a>
