@@ -1,0 +1,52 @@
+
+---
+permalink: date/index.html
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>auti-index — By date</title>
+  <link rel="stylesheet" href="{{ '/style.css' | url }}">
+</head>
+<body>
+
+<header>
+  <h1>auti-index</h1>
+  <p>Short writings and observations.</p>
+</header>
+
+<main>
+  <nav id="index" aria-label="Entry index">
+    <h2>INDEX (BY DATE)</h2>
+    <p>Sort: <a href="{{ '/' | url }}">A–Z</a> | <strong>By date</strong></p>
+
+    <ol>
+      {% for post in collections.posts | reverse %}
+      <li>
+        <a href="#{{ post.data.slug }}">{{ post.data.title }}</a>
+        <span class="date">({{ post.date | dateDisplay }})</span>
+      </li>
+      {% endfor %}
+    </ol>
+  </nav>
+
+  <hr>
+
+  <section aria-label="Entries">
+    {% for post in collections.posts | reverse %}
+    <article id="{{ post.data.slug }}">
+      <h2>{{ post.data.title }}</h2>
+      <p class="date">{{ post.date | dateDisplay }}</p>
+      {{ post.templateContent | safe }}
+      <p><a href="#index">↑ Back to index</a></p>
+    </article>
+    <hr>
+    {% endfor %}
+  </section>
+</main>
+
+</body>
+</html>
