@@ -1,4 +1,4 @@
-/* AUTI-INDEX — Minimal text website */
+/* AUTI-INDEX — Compact text archive */
 
 * {
   box-sizing: border-box;
@@ -16,7 +16,7 @@ body {
   line-height: 1.65;
   max-width: 760px;
   margin: 0 auto;
-  padding: 40px 24px 100px;
+  padding: 28px 24px 70px;
 }
 
 h1, h2 {
@@ -26,28 +26,34 @@ h1, h2 {
 }
 
 h1 {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 header {
-  margin-bottom: 50px;
-}
-
-header p,
-.date {
-  color: #666666;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #999999;
 }
 
 nav {
-  margin-bottom: 50px;
+  margin-bottom: 24px;
+}
+
+nav h2 {
+  margin: 0 0 8px;
+}
+
+nav p {
+  margin: 0 0 12px;
 }
 
 nav ol {
   padding-left: 35px;
+  margin: 0;
 }
 
 nav li {
-  margin-bottom: 8px;
+  margin-bottom: 2px;
 }
 
 a {
@@ -65,39 +71,51 @@ a:hover {
 
 hr {
   border: none;
-  border-top: 1px solid #cccccc;
-  margin: 45px 0;
+  border-top: 1px solid #aaaaaa;
+  margin: 24px 0;
 }
 
 article {
-  margin-bottom: 60px;
+  margin-bottom: 0;
   overflow-wrap: break-word;
+  scroll-margin-top: 20px;
 }
 
-article h2 {
-  margin-bottom: 4px;
+.entry-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-bottom: 14px;
+}
+
+.entry-heading h2 {
+  margin: 0;
+}
+
+.date {
+  color: #666666;
+  font-size: 0.85em;
 }
 
 article p {
   margin: 0 0 18px;
 }
 
-article .date {
+.entry-links {
   font-size: 0.85em;
-  margin-bottom: 24px;
-}
-
-article p:last-child {
-  margin-top: 30px;
+  margin-top: 18px;
+  margin-bottom: 0;
 }
 
 @media (max-width: 600px) {
   body {
     font-size: 14px;
-    padding: 24px 16px 60px;
+    padding: 20px 16px 50px;
   }
 
-  header {
-    margin-bottom: 35px;
+  .entry-heading {
+    gap: 2px 12px;
   }
 }
