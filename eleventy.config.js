@@ -1,4 +1,3 @@
-
 export default function(eleventyConfig) {
 
   // Include the stylesheet in the finished website
